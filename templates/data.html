@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PowerGrid</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+
+<center>
+
+<form action="/action_page.php">
+  <label for="cars">X-axis:</label>
+  <select id="cars" name="cars">
+
+  {% for name in cols %}
+	<option value="{{name}}">{{name}}</option>
+  {% endfor %}
+
+  </select>
+  <label for="cars">Y-axis:</label>
+  <select id="cars" name="cars">
+
+  {% for name in cols %}
+	<option value="{{name}}">{{name}}</option>
+  {% endfor %}
+
+  </select>
+
+  <input type="submit">
+</form>
+
+
+</form>
+
+<div id='chart_box'>
+	
+</div>
+</center>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
