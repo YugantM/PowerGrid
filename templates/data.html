@@ -15,9 +15,9 @@
 
 <center>
 
-<form action="/action_page.php">
+<form action="/graph" method = "POST" >
   <label for="cars">X-axis:</label>
-  <select id="cars" name="cars">
+  <select id="cars" name="line1">
 
   {% for name in cols %}
 	<option value="{{name}}">{{name}}</option>
@@ -25,7 +25,7 @@
 
   </select>
   <label for="cars">Y-axis:</label>
-  <select id="cars" name="cars">
+  <select id="cars" name="line2">
 
   {% for name in cols %}
 	<option value="{{name}}">{{name}}</option>
@@ -39,9 +39,16 @@
 
 </form>
 
-<div id='chart_box'>
+
+
+{% if display == 1%}
+<img src="{{ url_for('plt0') }}"> 
+<img src="{{ url_for('plt1') }}">
+
+{%endif%}
+
+
 	
-</div>
 </center>
 
 

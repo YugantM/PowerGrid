@@ -12,3 +12,13 @@ body{
 	align-content: center;
 	margin: 20px 0px;
 }
+
+img{
+	height: 800px;
+	width: 1400px;
+	box-sizing: border-box;
+	align-self: center;
+	align-content: center;
+	margin: 20px 0px;
+	
+}
