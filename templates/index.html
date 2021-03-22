@@ -4,6 +4,17 @@
 	<title>PowerGrid</title>
 </head>
 <body>
+	<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    var url = 'http://127.0.0.1:5001/GUI-is-still-open'; 
+    fetch(url, { mode: 'no-cors'});
+    setInterval(function(){ fetch(url, { mode: 'no-cors'});}, 5000)();
+
+});
+
+</script>
 
 
       <form action = "http://localhost:5000/uploader" method = "POST" 

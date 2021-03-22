@@ -16,22 +16,34 @@
 <center>
 
 <form action="/graph" method = "POST" >
-  <label for="cars">X-axis:</label>
-  <select id="cars" name="line1">
 
-  {% for name in cols %}
-	<option value="{{name}}">{{name}}</option>
-  {% endfor %}
+  <label for="cars">Line 1:</label>
+    <select id="cars" name="line1">
 
-  </select>
-  <label for="cars">Y-axis:</label>
-  <select id="cars" name="line2">
+    {% for name in resp['cols'] %}
+  	<option value="{{name}}">{{name}}</option>
+    {% endfor %}
 
-  {% for name in cols %}
-	<option value="{{name}}">{{name}}</option>
-  {% endfor %}
+    </select>
 
-  </select>
+  <label for="cars">Line 2:</label>
+    <select id="cars" name="line2">
+
+    {% for name in resp['cols'] %}
+  	<option value="{{name}}">{{name}}</option>
+    {% endfor %}
+
+    </select>
+
+  <label for="cars">Algorithm:</label>
+    <select id="cars" name="op">
+    
+    {% for name in resp['ops'] %}
+    <option value="{{name}}">{{name}}</option>
+    {% endfor %}
+
+    </select>
+
 
   <input type="submit">
 </form>
@@ -43,6 +55,8 @@
 
 {% if display == 1%}
 <img src="{{ url_for('plt0') }}"> 
+
+<h3>Method:{{resp['sel']}}</h3>
 <img src="{{ url_for('plt1') }}">
 
 {%endif%}
