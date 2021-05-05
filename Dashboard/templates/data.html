@@ -7,7 +7,19 @@
 <body>
 
 
-<center><h1>Simulation: <div id='title'>{{title}}</div></h1></center>
+<center>
+
+	<div id="fixedbutton"><form action="{{ url_for('configure') }}" method="post"><button id="config" type="submit" name="configure" value="back" >Configure</button></form></div>
+
+	<h1>Simulation: <div id='title'>{{title}}</div></h1>
+
+</center>
+
+
+
+<div id='meta'><br><h2>Metadata</h2>{{meta|safe}}<h2>Stats:</h2>{{describe|safe}}</div>
+
+<div id='data'><br><h2>Sample</h2>{{data|safe}}</div>
 
 <form action="{{ url_for('selected_simulation') }}" method="post">
 <ul>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Configure</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='configure.css')}}">
+
+</head>
+<body>
+
+
+<div>
+  <form action="{{ url_for('config_response') }}" method="post">
+    <label for="fname">Database Name</label>
+    <input type="text" id="fname" name="host" placeholder="localhost">
+
+    <label for="cars">Choose a database:</label>
+
+<select name="database" id="cars">
+
+	<option value="{{config['database']}}" selected="selected">{{config['database']}}</option> 
+	{% for each in dbs %}
+		 <option value="{{each}}">{{each}}</option> 
+  	{%endfor%}
+</select>
+
+  
+    <input type="submit" name='selected' value="Submit">
+    <input type="submit" name='selected' style="background-color: white; color: black;" value='cancel'>
+  </form>
+</div>
+</body>
+</html>

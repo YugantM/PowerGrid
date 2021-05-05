@@ -3,6 +3,11 @@ body{
   padding: none;
 }
 
+h2{
+  padding: none;
+  margin: 0px 0px;
+}
+
 ul{
   list-style-type: none;
   margin: none;
@@ -27,7 +32,7 @@ ul button{
 }
 
 
-button:hover{
+ul button:hover{
   float:left;
   height: auto;
   width:auto;
@@ -58,4 +63,71 @@ ul li a{
 #title{
   color: red;
   display: inline-block;
+}
+
+#meta{
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}
+
+#meta table {
+  border:1px solid rgba(0,0,0,0.2);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#meta th, td {
+  text-align: left;
+  padding: 8px;
+
+}
+
+/*#meta tr:nth-child(even){background-color: #f2f2f2}*/
+
+#meta th {
+  background-color: rgba(0,23,255,0.75);
+  color: white;
+}
+
+
+
+
+
+#data{
+    display: inline-block;
+  width: auto;
+}
+#data table {
+  border:1px solid white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#data th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+#data tr:nth-child(even){background-color: #f2f2f2}
+
+#data th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+#fixedbutton {
+    position: fixed;
+    top: 0px;
+    left: 0px; 
+}
+
+#config button{
+background-color: orange;
+}
+
+#config button:hover{
+pointer-events: none;
 }
