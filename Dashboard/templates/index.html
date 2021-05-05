@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='primary.css')}}">
+
+</head>
+<body>
+
+
+<div class='title'>
+	
+
+
+	<center><h1>List of simulations</h1></center>
+</div>
+
+
+<form action="{{ url_for('selected_item') }}" method="post">
+<ul>
+	
+	{% for name in simulation_list %}
+  	<button type="submit" name="selected" value="{{name}}">{{name}}</button>
+    {% endfor %}
+</ul>
+
+</form>
+
+</body>
+</html>
