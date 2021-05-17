@@ -8,14 +8,14 @@ h2{
   margin: 0px 0px;
 }
 
-ul{
-  list-style-type: none;
-  margin: none;
-  padding: 0;
+#menu{
+  display: block;
+  border:1px solid black;
 }
 
-ul button{
-  float:left;
+
+#menu button{
+  
   height: auto;
   width:auto;
   margin:5px 4px ;
@@ -32,8 +32,8 @@ ul button{
 }
 
 
-ul button:hover{
-  float:left;
+#menu button:hover{
+  
   height: auto;
   width:auto;
   margin:5px 4px ;
@@ -50,15 +50,6 @@ ul button:hover{
   border-radius: 2px;
 }
 
-ul li:nth-child(3){
-  margin-right:0;
-}
-ul li a{
-  background:#5A9BD5;
-  display:block;
-  width:100%;
-  padding:15px 0;
-}
 
 #title{
   color: red;

@@ -19,18 +19,39 @@
 	<div id="fixedbutton"><form action="{{ url_for('configure') }}" method="post"><button id="config" type="submit" name="configure" value="back" >Configure</button></form></div>
 
 
-		<h1>List of simulations</h1></center>
+		<h1>Simulink Dashboard</h1></center>
 </div>
 
 
 <form action="{{ url_for('selected_item') }}" method="post">
-<ul>
-	
+
+
+<div id='menu'>
+
+	<center><h2> List of available simulatinos:</h2></center>
 	{% for name in simulation_list %}
+  	<button type="submit" name="selected" value="{{name}}" style="background-color: gray;">{{name}}</button>
+    {% endfor %}
+
+
+</div>
+
+<div id='menu'>
+
+	<center><h2> List of available tables:</h2></center>
+
+	{% if tables|length>0 %}
+
+	{% for name in tables %}
   	<button type="submit" name="selected" value="{{name}}">{{name}}</button>
     {% endfor %}
-</ul>
 
+    {% else %}
+
+    <center><h3 style="color: red">No tables to show</h3></center>
+    {% endif %}
+
+</div>
 </form>
 
 </body>
